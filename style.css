@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap');
+
+:root {
+    --primary-color: #ff6b00;
+    --secondary-color: #2d3436;
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    font-family: 'Tajawal', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+
+/* Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.98); padding: 10px 0; position: fixed; width: 100%; top: 0; z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; width: 90%; max-width: 1200px; margin: 0 auto; }
+.logo img { height: 55px; width: auto; }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--secondary-color); font-weight: 700; font-size: 1.1rem; transition: color 0.3s; }
+.nav-links a.active, .nav-links a:hover { color: var(--primary-color); }
+.burger { display: none; cursor: pointer; }
+.burger div { width: 25px; height: 3px; background-color: var(--secondary-color); margin: 5px; transition: all 0.3s ease; }
+
+/* Hero */
+.hero {
+    height: 90vh; background: url('hero-banner.jpg') no-repeat center center/cover;
+    position: relative; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 60px;
+}
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)); }
+.hero-content { position: relative; z-index: 1; color: var(--white); padding: 20px; max-width: 800px; }
+.hero-content h1 { font-size: 3.5rem; color: var(--primary-color); margin-bottom: 10px; }
+.hero-content h2 { font-size: 2rem; margin-bottom: 20px; }
+.hero-btns { display: flex; gap: 15px; justify-content: center; margin-top: 30px; }
+.btn { padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; font-size: 1rem; transition: all 0.3s; }
+.btn-primary { background-color: var(--primary-color); color: var(--white); }
+.btn-secondary { background: transparent; border: 2px solid var(--white); color: var(--white); }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+/* Sections & Services */
+.section { padding: 80px 20px; }
+.bg-light { background-color: #ececec; }
+.container { max-width: 1200px; margin: 0 auto; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 10px; color: var(--secondary-color); }
+.section-subtitle { text-align: center; margin-bottom: 50px; color: #666; }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
+.feature-card { background: var(--white); padding: 40px 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s; border: 1px solid #eee; }
+.feature-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
+.feature-card i { font-size: 3rem; color: var(--primary-color); margin-bottom: 20px; }
+
+/* --- Reviews Section --- */
+.reviews-wrapper { display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; }
+.reviews-grid { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+.review-card { background: var(--white); padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-right: 4px solid var(--primary-color); }
+.review-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.user-icon-placeholder { font-size: 3rem; color: #ccc; } /* لون وتنسيق أيقونة الشخص */
+.stars { color: #f1c40f; font-size: 0.9rem; }
+.review-text { font-style: italic; color: #555; }
+
+/* Stats Box (Instead of Image) */
+.results-stats { flex: 1; min-width: 300px; display: grid; grid-template-columns: 1fr; gap: 20px; }
+.stat-box { background: var(--white); padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.stat-box:hover { transform: translateY(-5px); border-bottom: 4px solid var(--primary-color); }
+.stat-box i { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px; }
+.stat-box h4 { font-size: 2rem; font-weight: 900; margin-bottom: 5px; }
+
+/* Vision */
+.vision-container { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+.vision-text { flex: 1; font-size: 1.1rem; text-align: justify; }
+.vision-img { flex: 1; min-width: 300px; }
+.vision-img img { width: 100%; border-radius: 20px; box-shadow: 10px 10px 0 var(--primary-color); }
+
+/* --- Courses Page Specifics --- */
+.page-header { background-color: var(--secondary-color); color: var(--white); padding: 120px 20px 50px; text-align: center; }
+.course-layout { display: flex; gap: 50px; flex-wrap: wrap; background: var(--white); padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.course-image { flex: 1; min-width: 300px; }
+.course-image img { width: 100%; border-radius: 15px; object-fit: cover; }
+.course-info { flex: 1.5; }
+.course-info h2 { font-size: 2rem; margin-bottom: 20px; color: var(--primary-color); }
+.skills-list { list-style: none; margin-bottom: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.skills-list li { display: flex; align-items: center; gap: 10px; font-weight: bold; }
+.skills-list li i { color: #2ecc71; }
+.course-action { background: #f4f4f4; padding: 25px; border-radius: 15px; border-right: 5px solid var(--primary-color); }
+.form-group { margin-bottom: 15px; }
+.form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; }
+.btn-block { width: 100%; display: flex; justify-content: center; align-items: center; gap: 10px; }
+
+/* Footer */
+footer { background: #111; color: #fff; text-align: center; padding: 40px 20px; margin-top: 50px; }
+.contact-info { margin: 20px 0; font-size: 1.1rem; }
+.social-links { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+.social-icon { width: 45px; height: 45px; border-radius: 50%; background: #333; display: flex; align-items: center; justify-content: center; color: var(--white); transition: 0.3s; }
+.social-icon:hover { background: var(--primary-color); transform: rotate(360deg); }
+
+/* Whatsapp Float */
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: #25d366; color: #FFF; border-radius: 50%; font-size: 30px; display: flex; align-items: center; justify-content: center; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000; transition: transform 0.3s; }
+.whatsapp-float:hover { transform: scale(1.1); }
+
+/* Animations */
+.hidden { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+.show { opacity: 1; transform: translateY(0); }
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .nav-links { position: fixed; right: 0; height: 100vh; top: 75px; background: var(--white); flex-direction: column; width: 70%; transform: translateX(100%); transition: 0.5s; padding-top: 50px; box-shadow: -2px 0 10px rgba(0,0,0,0.1); }
+    .nav-active { transform: translateX(0%); }
+    .burger { display: block; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .course-layout, .vision-container, .reviews-wrapper { flex-direction: column; }
+    .results-stats { order: -1; margin-bottom: 20px; } 
+}

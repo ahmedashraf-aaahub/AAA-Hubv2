@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAA Hub | الكورسات</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="logo-final.webp" alt="AAA Hub Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="courses.html" class="active">الكورسات</a></li>
+                <li><a href="index.html#vision">رؤية المؤسس</a></li>
+                <li><a href="#contact-course">اشترك الآن</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>الكورسات والمسارات التعليمية</h1>
+        </div>
+    </section>
+
+    <section class="section course-details">
+        <div class="container">
+            <div class="course-layout hidden">
+                <div class="course-image">
+                    <img src="course-12-skills.jpg" alt="كورس الفريلانس الشامل - 12 مهارة">
+                </div>
+                
+                <div class="course-info">
+                    <h2>كورس الفريلانس الشامل (Zero to Hero)</h2>
+                    <p class="course-brief">
+                        الكورس الأقوى لتعلم 11 مهارة أساسية للعمل عبر الإنترنت، مصمم للمبتدئين تماماً ولا يحتاج لخبرة سابقة أو معدات باهظة.
+                    </p>
+                    
+                    <ul class="skills-list">
+                        <li><i class="fas fa-check-circle"></i> تصميم المواقع (No-Code)</li>
+                        <li><i class="fas fa-check-circle"></i> الموشن جرافيك والأنيميشن</li>
+                        <li><i class="fas fa-check-circle"></i> وايت بورد أنيميشن</li>
+                        <li><i class="fas fa-check-circle"></i> فيديوهات CGI و UGC</li>
+                        <li><i class="fas fa-check-circle"></i> المونتاج وتعديل الفيديو</li>
+                        <li><i class="fas fa-check-circle"></i> التصميم الجرافيكي</li>
+                        <li><i class="fas fa-check-circle"></i> كورس الذكاء الاصطناعي (AI)</li>
+                        <li><i class="fas fa-check-circle"></i> منصات العمل الحر وجلب العملاء</li>
+                        <li><i class="fas fa-check-circle"></i> 3D Animation</li>
+                    </ul>
+
+                    <div class="course-action" id="contact-course">
+                        <h3>سجل اهتمامك الآن</h3>
+                        <p>املأ البيانات وسيتم تحويلك للواتساب لإتمام الحجز ومعرفة السعر</p>
+                        
+                        <form id="whatsappForm" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="الاسم ثلاثي" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="age" placeholder="السن" required>
+                            </div>
+                            <input type="hidden" id="course-name" value="كورس الفريلانس الشامل">
+                            
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fab fa-whatsapp"></i> اشترك الآن
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                 <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> support@aaahub.online</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/17qDsU3B4h/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/aaa_hub" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@aaa_hub" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@aaa_hub" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p style="margin-top:15px">جميع الحقوق محفوظة &copy; 2025 AAA Hub</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/201143092375" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>
